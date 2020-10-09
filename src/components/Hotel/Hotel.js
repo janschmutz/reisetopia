@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './Overview.css';
+import './Hotel.css';
 
-export default class Overview extends Component {
+export default class Hotel extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -10,11 +10,16 @@ export default class Overview extends Component {
         };
     }
     componentDidMount() {
-        console.log("Overview rendered");
+        console.log("Hotel rendered");
     }
     render() {
         return (
-            <h1>Overview</h1>
+            <div>
+                <h3>{this.props.hotel.name}</h3>
+                <h4>{this.props.hotel.address}</h4>
+                {this.props.hotel.images.length > 0 ? <div className="previewImg" style={{ backgroundImage: `url(${this.props.hotel.images[0].url})` }}/> : <div className="previewImg">kein Bild verfügbar</div>}
+                <button>zur Detailansicht</button>
+            </div>
         )
     }
 }

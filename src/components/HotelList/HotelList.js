@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import './Overview.css';
+import './HotelList.css';
+import Hotel from "../Hotel/Hotel";
 
-export default class Overview extends Component {
+export default class HotelList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +17,7 @@ export default class Overview extends Component {
         return (
             <div>
                 {this.props.hotels.map((hotel) => {
-                    return <p>htel</p>
+                    return <Hotel hotel={hotel}/>
                 })}
             </div>
         )

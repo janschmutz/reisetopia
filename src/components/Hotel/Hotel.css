@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+.previewImg {
+  height: 10em;
+  width: 15em;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
